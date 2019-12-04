@@ -1,0 +1,1382 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	margin:0;
+	border: 0;
+	padding: 0;
+	font-family: 'Playfair Display', serif;
+	display: inline-block;
+}
+
+
+/* nav bar constant for all pages */
+#my-logo {
+	position: fixed;
+	top: 0;
+	left: 1vw;
+	z-index: 10;
+	width: 4vw;
+	height: auto;
+
+}
+
+nav {
+	background-color: white;
+	top: 0;
+	position: fixed;
+	z-index: 9;
+	padding: 0;
+	margin: 0;
+	margin-left: -3vw;
+	width: 100vw;
+	overflow-x: visible;
+	height: 7vh;
+}
+
+nav a, .scroll a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav a {
+	color: #29454A;
+	text-shadow: none;
+	margin: 1vw 1vh;
+	font-size: 2.1vh; 
+	font-weight: bold;
+	float: right;
+}
+
+nav a:hover {
+	color: #6F305C;
+}
+
+/* for first.html */
+
+.home {
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: #29454A;
+}
+	
+.home header {
+	margin: 3vh 3vw;
+	height: 92vh;
+	width: 94vw;
+	background-image: url("pages/kayla.jpg");
+	background-attachment: fixed;
+ 	background-position: 88% 50%;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+	z-index: -1;
+}
+
+.scroll a {
+	color: #29454A;
+	text-align: center;
+	margin: 0;
+	position: absolute;
+	width: 94vw;
+	bottom: 1vh;
+	font-size: 2vh; 
+	animation-name: scroll;
+	animation-duration: 1.25s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+
+}
+
+.scroll a:hover {
+	animation-play-state: paused;
+	font-size: 2.5vh;
+}
+
+
+/* kayla park header */
+#name {
+	margin: 0;
+	opacity: 0;
+	text-align: center;
+	animation-name: name;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.75s;
+	width: 55vw;
+	position: absolute;
+	overflow: visible;
+	font-size: 13vh;
+    bottom: 45vh;
+}
+
+#caption, #caption-1, #caption-2, #caption-3, 
+#caption-4, #caption-5 {
+	animation: info 36s infinite linear;
+	opacity: 0;
+	text-align: center;
+	width: 55vw;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 4vh;
+	top: 58vh;
+}
+
+#caption { 
+	animation-delay: 1.75s;
+}
+
+#caption-1 {
+	animation-delay: 7.75s;
+}
+
+#caption-2 {
+	animation-delay: 13.75s;
+}
+
+#caption-3 {
+	animation-delay: 19.75s;
+}
+
+#caption-4 {
+	animation-delay: 25.75s;
+}
+
+#caption-5 {
+	animation-delay: 31.75s;
+}
+
+@keyframes scroll {
+	from {opacity: 0.6;}
+	to {opacity: 0.3;}
+}
+
+@keyframes name {
+	from {opacity: 0;}
+	to {opacity:1;}
+}
+
+@keyframes info {
+	0% {opacity: 0;}
+	8.75% {opacity: 0.9;}
+	17.5% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+
+
+/* for about section */
+
+#doodle {
+	position: absolute;
+	top: 110vh;
+	z-index: 5;
+	width: 43vw;
+	right: 3vw;
+	background-color: #BBD7D9;
+	border: 1vh solid #29454A;
+}
+
+.about-me, .now {
+	width: 100vw;
+	margin: 0;
+	overflow-y: scroll;
+}
+
+.about-me { 
+	color: #29454A;
+	height: 115vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.about-me section:nth-child(1) {
+	margin-top: 5vh;
+	opacity: 0.3;
+	height: 20vh;
+}
+.about-me section:nth-child(1) h1{
+	position: absolute;
+	font-size: 30vh;
+	margin: 0;
+}
+
+.about-me section:nth-child(2) {
+	font-size: 5vh;
+	height: 10vh;
+}
+
+.about-me section:nth-child(1), .about-me section:nth-child(2), .about-me section:nth-child(3), .about-me section:nth-child(4) {
+	width: 45vw;
+	margin-left: 3vw;
+}
+
+.about-me section:nth-child(3), .about-me section:nth-child(4){
+	font-size: 1.9vh;
+	line-height: 3vh;
+}
+
+.about-me section:nth-child(5), .about-me section:nth-child(6) {
+	display: inline-block;
+	width: 10vw;
+	margin-left: 3vw;
+}
+.about-me section:nth-child(5) h1, .about-me section:nth-child(6) h1 {
+	background-color: #29454A;
+	text-align: center;
+	padding-bottom: 1vh;
+	border-radius: 3vh;
+}
+
+.about-me section:nth-child(5) a, .about-me section:nth-child(6) a {
+	color: white;
+	text-decoration: none;
+	font-size: 2.25vh;
+
+}
+
+
+/* for currently section */
+
+.now {
+	position: absolute;
+	display: inline-block;
+	background-color: #C0A2AC;
+	color: white;
+	margin: 0;
+	text-align: center;
+	height: 80vh;
+}
+
+#now-bg, footer h1{
+	width: 100vw;
+	text-align: center;
+	position: absolute;
+	font-size: 40vh;
+	opacity: 0.3;
+	margin: 0;
+	margin-top: -5vh;
+}
+
+#now-cap {
+	margin-top: 25vh;
+	font-size: 10vh;
+}
+
+.now p {
+	margin-bottom: 3vh;
+	margin-left: 25vw;
+	width: 50vw;
+	text-align: center;
+	height: 4vh;
+}
+
+
+.now-art, .now-code, .now-misc {
+	position: absolute;
+	display: inline-block;
+	width: 25vw;
+	border: 0.75vh double #29454A;
+	text-align: center;
+	height: 84vh;
+	background-color: white;
+	margin-top: 60vh;
+	overflow-x: hidden;
+}
+
+.now-code {
+	margin-left: 10vw;
+}
+
+.now-art {
+	margin-left: 37.5vw;
+}
+
+.now-misc {
+	margin-left: 65vw;
+}
+
+.description {
+	height: 15vh;
+	width: 20vw;
+	margin: 0;
+	margin-left: 2.5vw;
+}
+
+.now-stuff h6 {
+	font-size: 2vh;
+}
+
+.now-stuff h1 {
+	width: 25vw;
+	text-align: center;
+	position: absolute;
+	margin: 0;
+	margin-top: -7vh;
+	opacity: 0.1;
+	overflow: hidden;
+	font-size: 25vh;
+}
+
+.now-code h1, .now-misc h1 {
+	width: 30vw;
+	margin-left: -3vw;
+}
+
+.now-stuff h4 {
+	font-size: 6vh;
+}
+
+.now-stuff a {
+	position: absolute;
+	width: 8vw;
+	padding: 1vh;
+	margin-top: 3vh;
+	left: 8.25vw;
+	border-radius: 3vh;
+	background-color: #29454A;
+	text-decoration: none;
+	color: white;
+}
+
+.about-me section:nth-child(5) h1:hover, .about-me section:nth-child(6) h1:hover,
+.now-stuff a:hover {
+	background-color: #6F305C;
+}
+
+footer {
+	position: absolute;
+	display: inline-block;
+	margin-top: 165vh;
+	width: 100vw;
+	background-color: #654650;
+	height: 43vh;
+}
+
+footer h1 {
+	font-size: 30vh;
+	color: #C0A2AC;
+}
+
+footer h4 {
+	color: white;
+	width: 100vw;
+	text-align: center;
+	font-size: 8vh;
+	margin-top: 15vh;
+}
+
+.logo {
+	display: inline-block;
+	margin: 0;
+	height: 3vw;
+	padding: 0;
+	padding-left: 1vw;
+	width: 3vw
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+}
+
+.logo img:hover {
+	opacity: 1;
+}
+
+
+footer h6 {
+	color: white;
+	display: inline-block;
+	margin: 0;
+	float: right;
+	font-size: 2vh;
+}
+
+#info {
+	position: absolute;
+	width: 50vw;
+	bottom: 3vh;
+	right: 3vh;
+}
+
+#info a {
+	color: white;
+	text-decoration: none;
+}
+
+#info a:hover {
+	text-decoration: underline;
+}
+
+
+
+
+/* for art, code, and misc pages */
+
+.hobbies-other {
+	width: 30vw;
+	height: 100vh;
+	position: fixed;
+}
+
+.hobbies-other h6 a, .hobbies-other a{
+	text-decoration: none;
+	color: #814A4C;
+}
+
+.hobbies-other h6 {
+	margin-top: 35vh;
+	margin-bottom: 5vh;
+	font-size: 6vh;
+}
+
+.misc .hobbies-other h6 {
+	margin-top: 30vh;
+}
+
+.hobbies-other .types a {
+	display: inline-block;
+	font-size: 3vh;
+	margin-top: 0;
+	opacity: 0.6;
+}
+
+.hobbies-other h6, .hobbies-other .types a {
+	width: 30vw;
+	text-align: center;
+}
+
+
+.hobbies-nav {
+	width: 15vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 10;
+	background-color: #FFF;
+}
+
+.hobbies-nav h6 a {
+	width: 10vw;
+	color: #814A4C;
+	font-size: 3vh;
+	text-decoration: none;
+	margin: 5vh 2.5vw;
+	margin-bottom: 3vh;
+}
+
+.hobbies-nav .types a,  .hobbies-nav #back a {
+	width: 10vh;
+	margin: 0 2.5vw;
+	line-height: 3vh;
+	display: inline-block;
+	text-decoration: none;
+	color: #814A4C;
+	font-size: 2vh;
+	opacity: 0.6;
+}
+
+
+.hobbies-nav #back a {
+	margin-top: 73vh;
+}
+
+.hobbies-other #back a {
+	position: absolute;
+	width: 30vw;
+	opacity: 0.6;
+	font-size: 2vh;
+	display: inline-block;
+	margin-top: 33vh;
+	text-align: center
+}
+
+
+.misc #back a {
+	margin-top: 30vh;
+}
+
+
+.hobbies-nav .types a:hover, #back a:hover,
+.hobbies-other .types a:hover, #active {
+	color: #814A4C;
+	opacity: 1;
+}
+
+.misc-info, .code-content {
+	position: absolute;
+	width: 70vw;
+	left: 30vw;
+	overflow: hidden;
+}
+
+
+/* for art page */
+
+.row, .gallery {
+	height: 95vh;
+	position: absolute;
+	top: 1.5vw;
+	bottom: 3vw;
+}
+
+.row {
+	overflow-y: scroll;
+	display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(40, 15vh);
+    grid-gap: 1vw;
+    width: 83vw;
+    left: 15vw;
+}
+
+
+.row img {
+	display: inline-block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.row a:hover {
+	filter: grayscale(100%);
+}
+
+
+/* putting photos in grid display 
+for art page */
+
+#ports-pic5 {
+	grid-area: 1 / 1 / 5 / 2;
+}
+
+#ports-pic6 {
+	grid-area: 1 / 2 / 5 / 4;
+}
+
+#ports-pic1 {
+	grid-area: 1 / 4 / 3 / 5;
+}
+
+#ports-pic18 {
+	grid-area: 5 / 1 / 8 / 3;
+}
+
+#ports-pic12 {
+	grid-area: 5 / 3 / 8 / 4;
+}
+
+#ports-pic4 {
+	grid-area: 3 / 4 / 6 / 5;
+}
+
+#ports-pic2 {
+	grid-area: 6 / 4 / 9 / 5;
+}
+
+#ports-pic10 {
+	grid-area: 17 / 1 / 20 / 2;
+}
+
+#ports-pic19 {
+	grid-area: 8 / 1 / 11 / 2;
+} 
+
+#ports-pic3 {
+	grid-area: 8 / 2 / 11 / 4;
+}
+
+#ports-pic8 {
+	grid-area: 9 / 4 / 11 / 5;
+}
+
+#ports-pic11 {
+	grid-area: 11 / 1 / 15 / 3;
+}
+
+#ports-pic13 {
+	grid-area: 15 / 1 / 17 / 2;
+}
+
+#ports-pic7 {
+	grid-area: 11 / 3 / 14 / 5;
+}
+
+#ports-pic9 {
+	grid-area: 14 / 3 / 18 / 5;
+}
+
+#ports-pic14 {
+	grid-area: 15 / 2 / 18 / 3;
+}
+
+#ports-pic16 {
+	grid-area: 18 / 2 / 22 / 4;
+}
+
+#ports-pic17 {
+	grid-area: 18 / 4 / 24 / 5;
+}
+
+
+
+#sport-pic1 {
+	grid-area: 1 / 1 / 4 / 3;
+}
+
+#sport-pic4 {
+	grid-area: 1 / 3 / 4 / 4;
+}
+
+#sport-pic6 {
+	grid-area: 1 / 4 / 4 / 5;
+}
+
+#sport-pic8 {
+	grid-area: 4 / 2 / 7 / 4;
+}
+
+#sport-pic3 {
+	grid-area: 4 / 1 / 6 / 2;
+}
+
+#sport-pic10{
+	grid-area: 4 / 4 / 7 / 5;
+}
+
+#sport-pic7 {
+	grid-area: 6 / 1 / 9 / 2;
+}
+
+#sport-pic5 {
+	grid-area: 7 / 2 / 9 / 3;
+}
+
+#sport-pic14 {
+	grid-area: 9 / 1 / 12 / 3;
+}
+
+#sport-pic2 {
+	grid-area: 7 / 3 / 9 / 4;
+}
+
+#sport-pic11 {
+	grid-area: 7 / 4 / 11 / 5;
+}
+
+#sport-pic12 {
+	grid-area: 9 / 3 / 11 / 4;
+}
+
+#sport-pic13 {
+	grid-area: 11 / 3 / 14 / 5;
+}
+
+#sport-pic9 {
+	grid-area: 12 / 1 / 14 / 2;
+}
+
+
+
+
+#nature-pic1 {
+	grid-area: 1 / 1 / 4 / 3; 
+}
+
+#nature-pic2 {
+	grid-area: 1 / 3 / 3 / 4;
+}
+
+#nature-pic4 {
+	grid-area: 1 / 4 / 3 / 5;
+}
+
+#nature-pic8 {
+	grid-area: 4 / 1 / 7 / 2;
+}
+
+#nature-pic6 {
+	grid-area: 4 / 2 / 6 / 3;
+}
+
+#nature-pic12 {
+	grid-area: 3 / 3 / 6 / 5;
+}
+
+#nature-pic7 {
+	grid-area: 7 / 1 / 9 / 2;
+}
+
+#nature-pic5 {
+	grid-area: 6 / 2 / 9 / 4;
+}
+
+#nature-pic10 {
+	grid-area: 9 / 1 / 12 / 2;
+}
+
+#nature-pic9 {
+	grid-area: 9 / 4 / 12 / 5;
+}
+
+#nature-pic11 {
+	grid-area: 6 / 4 / 9 / 5;
+}
+
+#nature-pic3 {
+	grid-area: 9 / 2 / 13 / 4;
+}
+
+
+
+
+#ps-pic2 {
+	grid-area: 1 / 1 / 4 / 2;
+}
+
+#ps-pic1 {
+	grid-area: 1 / 2 / 5 / 4;
+}
+
+#ps-pic5 {
+	grid-area: 1 / 4 / 3 / 5;
+}
+
+#ps-pic4 {
+	grid-area: 4 / 1 / 6 / 2;
+}
+
+#ps-pic3 {
+	grid-area: 5 / 2 / 8 / 4;
+}
+
+#ps-pic7 {
+	grid-area: 3 / 4 / 7 / 5;
+}
+
+#ps-pic8 {
+	grid-area: 6 / 1 / 8 / 2;
+}
+
+#ps-pic9 {
+	grid-area: 10 / 1 / 13 / 3;
+}
+
+#ps-pic14  {
+	grid-area: 8 / 1 / 10 / 3;
+}
+
+#ps-pic6 {
+	grid-area: 8 / 3 / 13 / 5;
+}
+
+#ps-pic11 {
+	grid-area: 7 / 4 / 8 / 5;
+}
+
+#ps-pic12 { 
+	grid-area: 13 / 1 / 15 / 2;
+}
+
+#ps-pic13 {
+	grid-area: 13 / 2 / 16 / 3;
+}
+
+#ps-pic15 {
+	grid-area: 13 / 3 / 17 / 5;
+}
+
+
+/* for scrolling gallery */
+
+.gallery {
+	height: 93vh;
+    margin: 0 auto; /* Just to center the page */
+}
+
+.gallery ul {
+    overflow: hidden;
+    height: 93vh;
+    list-style: none;
+    width: 100vw;
+    padding: 0;
+}
+
+.gallery ul li {
+	text-align: center;
+	width: 100vw;
+	height: 93vh;
+	bottom: 0;
+}
+
+.gallery ul li img {
+	height: 100%;
+    max-width: 70vw;
+    width: auto;
+    object-fit: contain;
+}
+
+.gallery a {
+	color: #814A4C;
+	margin: 0;
+	margin-top: 3vh;
+	text-decoration: none;
+}
+
+.gallery ul li {
+    transform:translate(50vw, 0) scale(0.8);
+    transition:all 0.25s ease;
+    opacity:0;
+}
+
+.gallery ul li a {
+	font-size: 2.5vh;
+	opacity: 0.6;
+	position: absolute;
+	width: auto;
+}
+
+.next {
+	right: 1vw;
+	bottom: 0;
+}
+
+.slash {
+	right: 4vw;
+	bottom: 0;
+}
+
+.prev {
+	right: 5vw;
+	bottom: 0;
+}
+
+.gallery ul li a:hover {
+	opacity: 1;
+}
+
+#firstSlide:hover, #lastSlide:hover {
+	opacity: 0.6;
+}
+
+
+
+#one:target, #four:target, #six:target, #three:target,
+#eight:target, #ten:target, #seven:target, #five:target,
+#two:target, #eleven:target, #fourteen:target, #twelve:target,
+#nine:target, #thirteen:target, #fifteen:target, #eighteen:target,
+#nineteen:target, #sixteen:target, #seventeen:target {
+	position: absolute;
+    transform:translate(0) scale(1);
+    opacity:1;
+
+}
+
+
+#quit {
+	position: fixed;
+	width: 2vw;
+	height: auto;
+	margin: 1.5vw 2.5vw;
+	right: 0;
+}
+
+
+
+
+/* for misc and code sides */
+
+.code-list h2, .code-list h4,
+.misc-list h2, .misc-list h4 {
+	width: 70vw;
+	text-align: center;
+}
+
+.code-list h2, .misc-list h2 {
+	margin: 0;
+	margin-top: -5vh;
+	font-size: 20vh;
+	opacity: 0.1;
+}
+
+.code-list h4, .misc-list h4 {
+	position: absolute;
+	opacity: 0.8;
+	font-size: 5vh;
+	margin-top: -13vh;
+}
+
+.experience, .travel {
+	background-color: rgba(129,74,76, 0.7);
+}
+
+.code-experience {
+	height: 45vh;
+	padding: 2vh 1.35vw;
+	margin: 5vh 2vw;
+	width: 23%;
+	overflow: hidden;
+	display: inline-block;
+	border: 0.25vh solid white;
+}
+
+.projects, .bake {
+	background-color: rgba(129,74,76, 0.8);
+}
+
+.projects p {
+	padding: 0 3vw;
+	text-align: center;
+}
+
+.projects-ex {
+	display: inline-block;
+	margin-left: 3vw;
+	margin-top: 3vh;
+	width: 30vw;
+	text-align: center;
+}
+
+.projects-ex img {
+	margin: 0;
+	width: 27vw;
+	height: auto;
+}
+.future, .fun {
+	background-color: rgba(129,74,76, 1);
+}
+
+.misc-info h1 {
+	margin: 0;
+	margin-top: -0.5vw;
+	font-size: 6vh;
+}
+
+.misc-info img {
+	position: absolute;
+	width: 30vw;
+	height: 30vw;
+	left: 3vw;
+	top: 15vh;
+
+}
+
+.misc-info p {
+	font-size: 2vh;
+	font-weight: 400;
+}
+
+.track p, .music p, .travel p, .bake p {
+	text-align: left;
+	margin-left: 36vw;
+	width: 30vw;
+}
+
+.track p, .travel p, .bake p {
+	margin-top: 23vh;
+}
+
+.music p {
+	margin-top: 18vh;
+}
+
+#second-track {
+	margin-top: 5vh;
+}
+
+.misc-list, .code-list {
+	height: 90vh;
+	color: white;
+	overflow: hidden;
+}
+
+.track {
+	background-color: rgba(129,74,76, 0.5);
+
+}
+
+.music {
+	background-color: rgba(129,74,76, 0.6);
+
+}
+
+.music video {
+	opacity: 0.8;
+	position: absolute;
+	width: 30vw;
+	height: auto;
+	left: 3vw;
+	top: 125vh;
+}
+
+.music a {
+	color: white;
+}
+
+.music a:hover {
+	color: rgba(129,74,76, 1);
+}
+
+
+.track img {
+	position: absolute;
+	top: 10vh;
+	left: 5vw;
+	width: 25vw;
+	height: auto;
+}
+
+.travel img {
+	position: absolute;
+	top: 200vh;
+	opacity: 0.85;
+	width: 35vw;
+	left: 2vw;
+	height: auto;
+}
+
+.bake img {
+	position: absolute;
+	top: 290vh;
+	left: 2vw;
+	opacity: 0.80;
+	width: 35vw;
+	height: auto;
+}
+
+.fun ol, .future ol {
+	width: 50vw;
+	margin-left: 8vw
+}
+
+.fun li, .future li {
+	margin-top: 3vh;
+}
+
+
+
+
+/* responsive design */
+
+@media only screen and (max-width: 640px) {
+	header h1, header h6 {
+		color: white;
+	}
+
+	.home header {
+		background-image: url("pages/kayla1.jpg");
+	}
+
+	#my-logo {
+		width: 8vw;
+	}
+
+	#name {
+		font-size: 6vh;
+		bottom: 25vh;
+		width: 100vw;
+	}
+
+	#caption, #caption-1, #caption-2, #caption-3, 
+	#caption-4, #caption-5 {
+		font-size: 2vh;
+		top: 75vh;
+		width: 100vw;
+	}
+
+	#doodle {
+		position: static;
+		top: 105vh;
+		width: 80vw;
+		margin-top: 10vh;
+		margin-left: 10vw;
+		margin-bottom: 5vh;
+		height: auto;
+	}
+
+	.about-me {
+		height: auto;
+	}
+
+	.about-me section:nth-child(1) {
+		display: none;
+	}
+
+	.about-me section:nth-child(2) {
+		font-size: 3vh;
+	}
+
+	.about-me section:nth-child(2), 
+	.about-me section:nth-child(3),
+	.about-me section:nth-child(4) {
+		margin-left: 10vw;
+		width: 80vw;
+		text-align: justify;
+	}
+
+	.about-me section:nth-child(5),
+	.about-me section:nth-child(6) {
+		width: 20vw;
+		margin-bottom: 10vh;
+	}
+
+	.about-me section:nth-child(5) a,
+	.about-me section:nth-child(6) a {
+		font-size: 1.7vh;
+	}
+
+	.about-me section:nth-child(5) {
+		margin-left: 30vw;
+	}
+
+	#now-bg {
+		display: none;
+	}
+
+	#now-cap {
+		font-size: 4vh;
+		margin-top: 5vh;
+	}
+
+	.now p {
+		width: 80vw;
+		margin-left: 10vw;
+		font-size: 2vh;
+	}
+
+	.now-code, .now-art, .now-misc {
+		width: 90vw;
+		margin: 2vh 0;
+		position: relative;
+		margin-left: 4vw;
+		height: 100vh;
+	}
+
+	.now-code {
+		margin-top: 35vh;
+	}
+
+	.now-stuff h1 {
+		width: 100vw;
+	}
+
+	.now-stuff h6 {
+		font-size: 3vh;
+	}
+
+	.now-stuff a {
+		width: 30vw;
+		left: 29vw;
+	}
+
+	.description {
+		width: 85vw;
+	}
+
+	footer {
+		margin-top: 3vh;
+		height: 35vh;
+	}
+
+	footer h1 {
+		font-size: 15vh;
+	}
+
+	footer h4 {
+		margin-top: 5vh;
+	}
+
+	#info {
+		width: 100vw;
+		right: 0;
+	}
+
+	footer h6 {
+		width: 100vw;
+		margin: 0;
+		text-align: center;
+		font-size: 1.8vh;
+	}
+
+	.social {
+		width: 100vw;
+		text-align: center;
+		bottom: 7vh;
+		position: relative;
+	}
+
+	.social a {
+		width: 9vw;
+		height: auto;
+	}
+
+	.hobbies-other {
+		display: none;
+	}
+
+	.code-content, .misc-info {
+		width: 100vw;
+		left: 0;
+	}
+
+	.code-list {
+		height: auto;
+	}
+
+	.code-list h2, .code-list h4, .misc-info h2, .misc-info h4  {
+		width: 100vw;
+		text-align: center;
+	}
+
+	.misc-info h2 {
+		height: 25vh;
+		width: 200vw;
+		margin-left: -50vw;
+	}
+
+	.code-list h4, .misc-info h4 {
+		width: 90vw;
+		margin-left: 5vw;
+		font-size: 3vh;
+	}
+
+	.code-experience {
+		width: 80vw;
+		margin-left: 7.5vw;
+		height: auto;
+		margin-top: 0;
+	}
+
+	.projects-ex {
+		width: 70vw;
+		margin-bottom: 5vh;
+		margin-top: 0;
+		margin-left: 15vw;
+	}
+
+	.projects-ex img {
+		width: 70vw;
+	}
+
+	.future ol {
+		margin-bottom: 10vh;
+	}
+
+	.misc-info img {
+		width: 50vw;
+		margin-left: 23vw;
+		margin-top: 12vh;
+	}
+
+	.misc-info video {
+		margin-top: 0;
+		width: 80vw;
+		margin-left: 8vw;
+	}
+
+	.track img {
+		margin-left: 12vw;
+		margin-top: 0;
+	}
+
+	.track {
+		height: 100vh;
+	}
+
+	.misc-info p {
+		width: 80vw;
+		margin-left: 10vw;
+		text-align: justify;
+		margin-top: 33vh;
+	}
+
+	.track p{
+		margin-left: 5vw;
+		margin-top: 53vh;
+	}
+
+	.bake {
+		height: 80vh;
+	}
+
+	.fun {
+		height: 120vh;
+	}
+
+	.hobbies-nav {
+		height: 8vh;
+		width: 100vw;
+	}
+
+	.hobbies-nav h6 {
+		margin: 0;
+		margin-top: 0.5vh;
+		text-align: center;
+	}
+
+	.hobbies-nav .types {
+		width: 100vw;
+		text-align: center;
+	}
+
+	.hobbies-nav .types a {
+		font-size: 1.5vh;
+		text-align: center;
+		width: auto;
+	}
+
+	.hobbies-nav #back {
+		width: 100vw;
+		height: 3vh;
+		text-align: center;
+	}
+
+	.hobbies-nav #back a {
+		margin-top: 89vh;
+		font-size: 1.5vh;
+	}
+
+	.row {
+		overflow-y: scroll;
+		display: block;
+		width: 90vw;
+		left:5.5vw;
+	}
+
+	.row a {
+		pointer-events: none;
+		cursor: default;
+	}
+
+	.row img {
+		width: 90vw;
+		height: auto;
+	}
+
+
+
+}
+
+
