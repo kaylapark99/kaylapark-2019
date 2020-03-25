@@ -125,10 +125,12 @@ nav a:hover {
 	overflow: visible;
 	font-size: 13vh;
     bottom: 45vh;
+    color: white;
 }
 
 #caption, #caption-1, #caption-2, #caption-3, 
 #caption-4, #caption-5 {
+	color: white;
 	animation: info 36s infinite linear;
 	opacity: 0;
 	text-align: center;
@@ -847,7 +849,7 @@ for art page */
 
 .gallery ul li {
     transform:translate(50vw, 0) scale(0.8);
-    transition:all 0.25s ease;
+    transition:all 0s ease;
     opacity:0;
 }
 
@@ -1081,12 +1083,10 @@ for art page */
 /* responsive design */
 
 @media only screen and (max-width: 640px) {
-	header h1, header h6 {
-		color: white;
-	}
-
+	.
 	.home header {
 		background-image: url("pages/kayla1.jpg");
+		background-size: auto;
 	}
 
 	#my-logo {
@@ -1322,7 +1322,7 @@ for art page */
 	}
 
 	.fun {
-		height: 120vh;
+		height: 130vh;
 	}
 
 	.hobbies-nav {
@@ -1374,7 +1374,54 @@ for art page */
 		width: 90vw;
 		height: auto;
 	}
+}
 
+@media only screen and (min-width: 640px) and (max-width: 959px) {
+	#name, #caption, #caption-1, #caption-2, #caption-3, 
+	#caption-4, #caption-5 {
+		width: 80vw;
+		margin-left: 5vw;
+		text-align: left;
+	}
+
+	#name {
+		bottom: 38vh;
+		font-size: 10vh;
+	}
+
+	#caption, #caption-1, #caption-2, #caption-3, 
+	#caption-4, #caption-5 {
+		font-size: 3vh;
+		top: 65vh;
+	}
+
+	#my-logo {
+		width: 8vw;
+	}
+
+	.about-me {
+		height: 100vh;
+	}
+
+	.about-me section:nth-child(1) h1 {
+		font-size: 15vh;
+		opacity: 0.1;
+	}
+
+	.about-me section:nth-child(2) {
+		font-size: 3vh;
+		margin-top: -12vh;
+	}
+
+	#doodle {
+		margin-top: 6vh;
+	}
+
+	.about-me section:nth-child(5), .about-me section:nth-child(6) {
+		width: 14vw;
+	}
+
+}
 
 
 }
